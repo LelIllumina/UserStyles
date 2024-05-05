@@ -1,0 +1,331 @@
+/* ==UserStyle==
+@name           Nekoweb Template
+@namespace      lel.nekoweb.org
+@version        1.0.0
+@description    Template CSS for a Nekoweb Themes
+@author         Lel
+==/UserStyle== */
+@-moz-document url-prefix("https://nekoweb.org")
+{
+  /* ! The description is on the line above the variable */
+
+  /* Description of variable */
+  /* Selector { 
+  /* --variable: value;}
+
+  /* -------------------------------------------- */
+
+  /* * Uncomment if you're making a dark theme  */
+  /* :root {
+    color-scheme: dark;
+  }
+  input,
+  .input {
+    background: unset !important; 
+  } */
+
+  /* -------------------------------------------- */
+
+  /* Change colors */
+
+  :root {
+    /* Background behind BG image | All Pages */
+    --background: #bbd8bb;
+    /* Main/Top Background color | All/Most pages */
+    --mBackground: #fff2df;
+    /* Secondary/Bottom Background color | Account info area and donate page */
+    --sBackground: #fff9f1;
+    /* Explore section background | Main Page  */
+    --mainExplore: #ffd0cf;
+    /* Accent color | All/Most pages */
+    --accent: #fadabe;
+    /* Text color | All Pages */
+    --text: #774519;
+    /* Panel Text color (dashboard account settings links) | All Pages */
+    --panelText: #ffa3bf;
+    /* Navbar Text | All Pages */
+    --navbarText: #bf9a8b;
+    /* Anchor/link text | All/Most pages */
+    --links: #c092db;
+    /* Page screenshot | All Pages */
+    --pfp: #ffd0cf;
+    /* Border of elemetns in links section | Main Page */
+    --linksBorder: #ffd0cf;
+    /* Regular button color | Pages with buttons and donate page */
+    --button: #bbd8bb;
+    /* Disabled button color | Pages with buttons */
+    --disabledButton: #d5d5d5;
+    /* Danger Button | 2 settings pages */
+    --danger: #ffd0cf;
+    /* Danger Button border | 2 settings pages */
+    --dangerBorder: #b95c5c;
+    /* Donater modal border| Pages with buttons and donate page */
+    --donaterBorder: #bbd8bb;
+    /* Input Box Button Border (not a button element) | ONLY Settings page */
+    --inputBorder: #bbd8bb;
+    /* Input box Button Border color (not a button element) | ONLY Settings page */
+    --submitBorder: #95b695;
+    /* Input box Button text color (not a button element) | ONLY Settings page */
+    --submitText: #2c462c;
+    /* Disabled Input box Button border color (not a button element) | ONLY Settings page */
+    --disabledSubmitBorder: #959595;
+    /* Disabled Input box Button text color (not a button element) y| ONLY Settings page */
+    --disabledSubmitText: gray;
+    /* SiteBox Color | All pages with siteboxs */
+    --sitebox: #b08271;
+    /* Textarea Border color | Main Page and settings */
+    --textareaBorder: #774519;
+    /* Selected text background color | All Pages */
+    --selection: #95e995;
+    /* Selected text text color | All Pages */
+    --selectionText: #774519;
+    /*  Input box backgournf color | Dashboard and settings pages */
+    --inputBackground: white;
+    /* Navbar gradient | All Pages */
+    --navbarGradient: linear-gradient(#fff2df, #fadabe);
+    /* Navbar gradient when hovered | All Pages */
+    --navbarHoverGradient: linear-gradient(#fff9f1, #fadabe);
+    /* h2 background | All/Most Pages */
+    --h2Background: linear-gradient(#ffeed7, #ffd0cf);
+
+    /* -- Unkown uses (ignore) -- */
+
+    /* News | No instances found yet */
+    --news: #bbd8bb;
+    /* Error | No instances found yet, probably in dashboard */
+    --error: rgba(255, 0, 0, 0.8);
+    /* ok | No instances found yet, probably in dashboard */
+    --ok: green;
+  }
+
+  /* -------------------------------------------- */
+
+  /* Fonts */
+
+  /* Main Font */
+  html {
+    font-family: "MS UI Gothic", nec_apc3, Verdana, sans-serif;
+  }
+  /* Button Font */
+  button,
+  input[type="submit"],
+  select {
+    font-family: "MS UI Gothic", Verdana, sans-serif;
+  }
+  /* Input box Button Font */
+  input,
+  .input {
+    font-family: "MS UI Gothic", Verdana, sans-serif;
+  }
+  /* TextArea Font */
+  textarea {
+    font-family: "MS UI Gothic", Verdana, Tahoma, sans-serif;
+  }
+
+  /* -------------------------------------------- */
+
+  /* Images */
+
+  /* Main Background Pattern */
+  html {
+    background: url("/assets/nekopattern.png") repeat;
+  }
+  /* Placeholder cat */
+  .sitefeature {
+    background-image: url("/static/assets/previewplaceholder.png");
+  }
+  /* Banner Image */
+  /* .banner {
+    content: url(yourURLhere) !important;
+  } */
+  /* Icons in dashboard */
+  /* .tile img[src="/assets/folder.png"],
+  .tile img[src="/assets/file.png"],
+  .tile img[src="/assets/file_css.png"],
+  .tile img[src="/assets/file_html.png"],
+  .tile img[src="/assets/file_js.png"],
+  .tile img[src="/assets/file_xml.png"] {
+    object-fit: contain;
+  }
+
+  img[src="/assets/folder.png"] {
+    content: url(yourURLhere);
+  }
+
+  img[src="/assets/file.png"] {
+    content: url(yourURLhere);
+  }
+  img[src="/assets/file_html.png"] {
+    content: url(yourURLhere);
+  }
+
+  img[src="/assets/file_css.png"] {
+    content: url(yourURLhere);
+  }
+
+  img[src="/assets/file_js.png"] {
+    content: url(yourURLhere);
+  }
+  img[src="/assets/file_xml.png"] {
+    content: url(yourURLhere);
+  } */
+
+  /* -------------------------------------------- */
+
+  /* You shouldnt touch the stuff underneath unless you want to change something
+  other than color orwant a certain element to use a different variable */
+
+  html {
+    background-color: var(--background);
+  }
+
+  .containergrid {
+    background-color: var(--accent);
+    color: var(--text);
+    border: 2px solid var(--sBackground);
+  }
+
+  p {
+    color: var(--text);
+  }
+
+  h1,
+  h2 {
+    color: var(--text);
+  }
+
+  h2 {
+    background: var(--h2Background);
+    background-color: var(--accent);
+  }
+
+  hr {
+    border-bottom: 1px solid var(--accent);
+  }
+
+  button,
+  input[type="submit"],
+  select {
+    background-color: var(--button);
+    border: 1px solid var(--submitBorder);
+    color: var(--submitText);
+  }
+
+  .btn-danger {
+    background-color: var(--danger);
+    border: 1px solid var(--dangerBorder);
+  }
+
+  button:disabled,
+  input[type="submit"]:disabled {
+    background-color: var(--disabledButton);
+    border: 1px solid var(--disabledSubmitBorder);
+    color: var(--disabledSubmitText);
+  }
+
+  input,
+  .input {
+    background-color: var(--inputBackground);
+    color: var(--text);
+    border: 1px solid var(--inputBorder);
+  }
+
+  a {
+    color: var(--links);
+  }
+
+  .navigation ul {
+    background-color: var(--accent);
+  }
+
+  .navigation li {
+    border-right: 3px solid var(--accent);
+  }
+
+  .navigation li a {
+    color: var(--navbarText);
+    background: var(--navbarGradient);
+  }
+
+  .navigation li a:hover {
+    color: var(--links);
+    background: var(--navbarHoverGradient);
+  }
+
+  .paneltext a {
+    color: var(--panelText);
+  }
+
+  .sitecarousel {
+    background-color: var(--mainExplore);
+  }
+
+  .site-box {
+    color: var(--sitebox);
+  }
+
+  .carouselContainer p {
+    color: var(--text);
+  }
+
+  .contacts {
+    border: 2px solid var(--linksBorder);
+  }
+
+  .cotd {
+    background-color: var(--sBackground);
+  }
+
+  .sitebutton {
+    border: 2px solid var(--linksBorder);
+  }
+
+  textarea {
+    background: var(--mBackground);
+    color: var(--text);
+    border: 2px solid var(--textareaBorder);
+  }
+
+  .footer {
+    background-color: var(--mBackground);
+  }
+
+  .error {
+    color: var(--error);
+  }
+
+  .news {
+    border: 2px solid var(--news);
+    background-color: var(--sBackground);
+  }
+
+  .exploreNav {
+    border-bottom: 2px dashed var(--accent);
+  }
+
+  ::selection {
+    background: var(--selection);
+    color: var(--selectionText);
+  }
+
+  ::-moz-selection {
+    background: var(--selection);
+    color: var(--selectionText);
+  }
+
+  .paneltext a:hover {
+    color: var(--links);
+  }
+
+  #usersc {
+    border: 1px solid var(--pfp);
+  }
+
+  .ok {
+    color: var(--ok);
+  }
+}
+
+/* -------------------------------------------- */
+
+/* Your own css */
