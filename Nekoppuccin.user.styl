@@ -1,0 +1,129 @@
+/* ==UserStyle==
+@name           Nekoppuccin Web Theme
+@namespace      lel.nekoweb.org
+@version        1.1.1
+@preprocessor stylus
+@description    Catppuccin theme for nekoweb
+@author         Lel Illumina
+@var select backgroundDarkness "Choose the Background Varient" {
+  "Regular": "url('https://lel.nekoweb.org/images/theme/nekopattern.png')",
+  "Dark*": "url('https://lel.nekoweb.org/images/theme/nekopatternDark.png')"
+}
+@var checkbox backgroundGradient "Enable Gradient on Background" 1
+==/UserStyle== */
+@-moz-document url-prefix("https://nekoweb.org") {
+
+    :root {
+        color-scheme: dark;
+        --almostwhite: #1e1e2e;
+        --cream: #181825;
+        --orange: #11111b;
+        --peach: #1e1e2e;
+        --pink: #f5c2e7;
+        --purple: #cba6f7;
+        --palegreen: #c6a0f6;
+        --gray: #9399b2;
+        --lightbrown: #a6adc8;
+        --darkbrown: #cdd6f4;
+        --light-red: #e64553;
+        --crazy-green: #a6d189;
+        --gradientorange: linear-gradient(#181825, #11111b);
+    }
+
+    html {
+        min-height: 100%;
+        if backgroundGradient==1 {
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), backgroundDarkness repeat;
+        }
+        else {
+            background: backgroundDarkness repeat;
+        }
+    }
+
+    .banner {
+        content: url(https://lel.nekoweb.org/images/theme/Nekoppuccin%20Banner.png) !important;
+    }
+
+    h2 {
+        background: linear-gradient(#313244, #1e1e2e);
+    }
+
+    .contacts,
+    .sitebutton {
+        background-color: var(--orange);
+    }
+
+    .spirals > img {
+        filter: hue-rotate(230deg);
+    }
+
+
+    input,
+    .input {
+        background-color: unset !important;
+    }
+
+    input[type="submit"] {
+        color: var(--crazy-green)
+    }
+
+    .btn-danger {
+        background-color: var(--peach) !important;
+        border: 1px solid var(--light-red) !important;
+        color: var(--light-red) !important;
+    }
+
+    #filepath {
+        border: 1px solid var(--palegreen);
+    }
+
+    .navigation li {
+        border-right: none
+    }
+
+    .navigation li a:hover {
+        color: var(--purple);
+        background: linear-gradient(#1e1e2e, #11111b);
+    }
+
+    .tile img[src="/assets/folder.png"],
+    .tile img[src="/assets/file.png"],
+    .tile img[src="/assets/file_css.png"],
+    .tile img[src="/assets/file_html.png"],
+    .tile img[src="/assets/file_js.png"],
+    .tile img[src="/assets/file_xml.png"] {
+        object-fit: contain;
+    }
+
+    img[src="/assets/folder.png"] {
+        content: url(https://raw.githubusercontent.com/catppuccin/vscode-icons/main/icons/mocha/_folder.svg);
+    }
+
+    img[src="/assets/file.png"] {
+        content: url(https://raw.githubusercontent.com/catppuccin/vscode-icons/main/icons/mocha/_file.svg);
+    }
+    img[src="/assets/file_html.png"] {
+        content: url(https://raw.githubusercontent.com/catppuccin/vscode-icons/main/icons/mocha/html.svg);
+    }
+
+    img[src="/assets/file_css.png"] {
+        content: url(https://raw.githubusercontent.com/catppuccin/vscode-icons/main/icons/mocha/css.svg);
+    }
+
+    img[src="/assets/file_js.png"] {
+        content: url(https://raw.githubusercontent.com/catppuccin/vscode-icons/main/icons/mocha/javascript.svg);
+    }
+    img[src="/assets/file_xml.png"] {
+        content: url(https://raw.githubusercontent.com/catppuccin/vscode-icons/main/icons/mocha/xml.svg);
+    }
+
+    ::-moz-selection {
+        background: var(--purple);
+        color: var(--almostwhite);
+    }
+
+    ::selection {
+        background: var(--purple);
+        color: var(--almostwhite);
+    }
+}
